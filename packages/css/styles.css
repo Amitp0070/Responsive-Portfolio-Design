@@ -1084,6 +1084,11 @@ img {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
+  .about__img{
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+  }
 
   .nav__menu {
     padding: 2rem 0.25rem 4rem;
