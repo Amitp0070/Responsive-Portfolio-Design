@@ -1085,8 +1085,8 @@ img {
     margin-right: var(--mb-1);
   }
   .about__img{
-    height: 400px;
-    width: auto;
+    height: 300px;
+    width: 200px;
     object-fit: cover;
   }
 
