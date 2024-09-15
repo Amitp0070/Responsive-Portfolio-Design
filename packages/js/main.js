@@ -106,9 +106,8 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
     clickable: true,
   },
 
-  // Enable mouse or keyboard navigation if needed
-  // mousewheel: true,
-  // keyboard: true,
+  /* mousewheel: true,
+  keyboard: true, */
 });
 
 /*==================== TESTIMONIAL ====================*/
