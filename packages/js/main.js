@@ -210,3 +210,40 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Parallax effect for home__blob
+  document.addEventListener('mousemove', (e) => {
+      const blob = document.querySelector('.home__blob');
+      const mouseX = e.clientX / window.innerWidth - 0.5;
+      const mouseY = e.clientY / window.innerHeight - 0.5;
+      
+      blob.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+  });
+
+  // Smooth scroll for home__scroll-button
+  document.querySelector('.home__scroll-button').addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute('href');
+      document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
